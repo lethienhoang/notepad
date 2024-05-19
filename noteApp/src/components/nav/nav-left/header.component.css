@@ -117,3 +117,13 @@
 .wapper-logo {
     display: flex;
 }
+
+.custom-scrollbar::-webkit-scrollbar {width: 8px;}
+.custom-scrollbar::-webkit-scrollbar-track{
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}

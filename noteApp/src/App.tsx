@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Header } from './components/nav/nav-left/header.component'
+import "./App.css";
+import { Header } from "./components/nav/nav-left/header.component";
+import { Main } from "./components/nav/nav-right/main.component";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-           <Header></Header>
-
-    </>
-  )
+    <div className="main-container">
+      <div>
+        <Header />
+      </div>
+      <div>
+        <div className="overlay"></div>
+        <Main />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

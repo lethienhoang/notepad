@@ -1,0 +1,79 @@
+.main {
+  padding-inline: 1em 1em;
+  padding-block-end: 4em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main .header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  padding-block: 4em;
+}
+
+.main .header .wrapper {
+  flex-grow: 1;
+}
+
+.main .header .title {
+  margin-block-end: 1em;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 2em;
+  border: 1px solid #dedddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:where(:hover, :focus-visible) {
+  border-color: #cac8c8;
+}
+
+.card .card-title {
+  color: antiquewhite;
+}
+
+.card .card-text {
+  color: antiquewhite;
+  margin-block: 2em;
+  text-wrap: balance;
+  line-clamp: 4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: auto;
+}
+
+.card .card-time {
+  color: #fff;
+}
+
+.card .btn-icon {
+  opacity: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:where(:hover, :focus-visible) .btn-icon {
+  opacity: 1;
+}
+
+.note-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2em;
+    align-items: stretch;
+    align-content: center;
+}
