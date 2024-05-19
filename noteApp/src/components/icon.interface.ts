@@ -1,0 +1,3 @@
+interface IconProp {
+    customClassName: string;
+}

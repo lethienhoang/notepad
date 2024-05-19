@@ -1,0 +1,119 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content) 1fr max-content;
+  max-width: 30rem;
+  width: 100%;
+  padding: 0.2rem;
+  z-index: 4;
+  /* visibility: hidden; */
+}
+
+.sidebar.active {
+  transform: translate(100%);
+  visibility: visible;
+}
+
+.sidebar .fab {
+  display: none;
+}
+
+.sidebar > .wrapper {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar > .wrapper-1 {
+  margin-block-end: 3rem;
+  padding-inline: 2em 2em;
+}
+
+.btn-icon {
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 50%;
+}
+
+.btn-icon.large {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-icon.small {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-icon.small.material-symbols-rounded {
+  font-size: 1.8rem;
+}
+
+.material-symbols-rounded {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+:has(> .state-layer) {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:has(> .state-layer):hover > .state-layer {
+  opacity: 0.08;
+}
+
+:has(> .state-layer):is(:focus, :focus-visible, :focus-within) > .state-layer {
+  opacity: 0.12;
+}
+
+:has(> .state-layer):active > .state-layer {
+  opacity: 0.15;
+}
+
+.state-layer {
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -1;
+}
+
+.sidebar > .wrapper-2 {
+  padding-inline: 2em 2em;
+}
+
+.sidebar .nav {
+  overflow-y: auto;
+}
+
+.nav-item {
+  color: #fff;
+  height: 56px;
+  align-items: center;
+  gap: 0.5em;
+  padding-inline: 2em 2em;
+  cursor: pointer;
+  display: flex;
+}
+
+.header.logo-1 {
+    width: 70px;
+    height: 70px;
+    margin-top: 1.2rem;
+}
+
+.wapper-logo {
+    display: flex;
+}
